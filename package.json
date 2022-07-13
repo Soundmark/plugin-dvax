@@ -1,19 +1,22 @@
 {
-  "name": "umi-dvax",
+  "name": "umi-plugin-dvax",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "src/index.ts",
   "repository": "git@github.com:Soundmark/plugin-dvax.git",
   "author": "郑家豪 <beatboxzjh@163.com>",
   "license": "MIT",
   "description": "xstate like usage of dva in umi",
+  "files": [
+    "src"
+  ],
   "keywords": [
     "umi",
     "dva"
   ],
-  "scripts": {
-    "build": "tsc"
-  },
   "devDependencies": {
     "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "umi": "3.x"
   }
 }

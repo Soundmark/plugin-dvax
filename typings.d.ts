@@ -1,6 +1,3 @@
-declare module "umi" {
-  function getDvaApp(): any;
-}
 declare module "dva" {
   type EffectsMapObject = any;
   type ReducersMapObjectWithEnhancer = any;

@@ -1,5 +1,5 @@
-import { getDvaApp } from "umi";
 import { IModel, Model } from "./type";
+import { getDvaApp } from "umi";
 
 export const createModel = <T = any>({
   namespace,
