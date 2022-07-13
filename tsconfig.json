@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "es5",
+    "declaration": true,
+    "outDir": "./dist"
+  },
+  "include": ["./src", "./typings.d.ts"],
+  "exclude": ["node_modules"]
+}
