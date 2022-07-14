@@ -12,7 +12,6 @@ umi 插件，dva 用法封装
 
 ```ts
 export default defineConfig({
-  plugins: ["umi-plugin-dvax"],
   dva: {
     // 跳过model检测
     skipModelValidate: true,
