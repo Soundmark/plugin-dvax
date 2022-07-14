@@ -8,7 +8,7 @@ export default (api: IApi) => {
     join(__dirname, "createModel.tpl"),
     "utf-8"
   );
-  const typeTpl = readFileSync(join(__dirname, "type.tpl"), "utf-8");
+  const indexTpl = readFileSync(join(__dirname, "index.tpl"), "utf-8");
 
   api.onGenerateFiles(() => {
     try {
@@ -24,8 +24,8 @@ export default (api: IApi) => {
   api.onGenerateFiles(() => {
     try {
       api.writeTmpFile({
-        path: `${namespace}/type.ts`,
-        content: api.utils.Mustache.render(typeTpl),
+        path: `${namespace}/index.ts`,
+        content: api.utils.Mustache.render(indexTpl),
       });
     } catch (e) {
       api.logger.error(e);

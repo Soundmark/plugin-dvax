@@ -25,3 +25,5 @@ export interface Model<T> {
     update: (payload: Partial<T>) => void;
   };
 }
+
+export * from './createModel'
