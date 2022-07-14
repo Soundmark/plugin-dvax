@@ -1,17 +1,29 @@
 # Plugin-dvax
 
-在 umi 中进行类 xstate 的 dva 用法
+umi 插件，dva 用法封装
 
 ## Install
 
-`yarn add umi-dvax`
+`yarn add umi-plugin-dvax`
 
 ## Usage
+
+启用插件，在.umirc.ts：
+
+```ts
+export default defineConfig({
+  plugins: ["umi-plugin-dvax"],
+  dva: {
+    // 跳过model检测
+    skipModelValidate: true,
+  },
+});
+```
 
 在 model 文件内:
 
 ```typescript
-import { createModel } from "umi-dvax";
+import { createModel } from "@@/plugin-dvax";
 
 interface Param {
   a: number;
