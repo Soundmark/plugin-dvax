@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
+    "module": "CommonJS",
     "target": "es5",
     "moduleResolution": "node",
     "declaration": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "skipLibCheck": true
   },
   "include": ["./src", "./typings.d.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "./tpl"]
 }

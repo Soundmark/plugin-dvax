@@ -5,10 +5,10 @@ import { readFileSync } from "fs";
 export default (api: IApi) => {
   const namespace = "plugin-dvax";
   const createModelTpl = readFileSync(
-    join(__dirname, "createModel.tpl"),
+    join(__dirname, "../tpl/createModel.tpl"),
     "utf-8"
   );
-  const indexTpl = readFileSync(join(__dirname, "index.tpl"), "utf-8");
+  const indexTpl = readFileSync(join(__dirname, "../tpl/index.tpl"), "utf-8");
 
   api.onGenerateFiles(() => {
     try {
