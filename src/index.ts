@@ -1,6 +1,7 @@
 import { IApi } from "umi";
 import { join } from "path";
 import { readFileSync } from "fs";
+import { Mustache } from "@umijs/utils";
 
 export default (api: IApi) => {
   const namespace = "plugin-dvax";
@@ -14,7 +15,7 @@ export default (api: IApi) => {
     try {
       api.writeTmpFile({
         path: `${namespace}/createModel.ts`,
-        content: api.utils.Mustache.render(createModelTpl),
+        content: Mustache.render(createModelTpl, {}),
       });
     } catch (e) {
       api.logger.error(e);
@@ -25,7 +26,7 @@ export default (api: IApi) => {
     try {
       api.writeTmpFile({
         path: `${namespace}/index.ts`,
-        content: api.utils.Mustache.render(indexTpl),
+        content: Mustache.render(indexTpl, {}),
       });
     } catch (e) {
       api.logger.error(e);
