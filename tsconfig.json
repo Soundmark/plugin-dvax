@@ -5,7 +5,9 @@
     "moduleResolution": "node",
     "declaration": true,
     "outDir": "./dist",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "include": ["./src", "./typings.d.ts"],
   "exclude": ["node_modules", "./tpl"]
