@@ -1,11 +1,12 @@
 import { IApi } from "umi";
 import { join } from "path";
-import { readFileSync } from "fs";
+import { readFileSync, existsSync } from "fs";
 import { Mustache } from "@umijs/utils";
-import umiInfo from "umi/package.json";
 
 export default (api: IApi) => {
-  const namespace = umiInfo.version.startsWith("4") ? "" : "plugin-dvax";
+  const namespace = existsSync(join(api.cwd, "node_modules/@umijs/max"))
+    ? ""
+    : "plugin-dvax";
   const createModelTpl = readFileSync(
     join(__dirname, "../tpl/createModel.tpl"),
     "utf-8"
